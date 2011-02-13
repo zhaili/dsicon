@@ -1,0 +1,11 @@
+[Dd]ebug/
+[Rr]elease/
+/lua/
+*.aps
+*.ncb
+*.opt
+*.plg
+*.suo
+*.user
+*.sdf
+*.ipch
