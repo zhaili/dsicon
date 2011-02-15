@@ -11,6 +11,8 @@
 #define lcp_ascii		8
 #define lcp_variable	12
 #define lcp_forceshow	16
+#define lcp_fitlargeronly 32
+#define lcp_center	64
 
 #define lcs_findfirst	1
 #define lcs_matchcase	2

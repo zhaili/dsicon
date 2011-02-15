@@ -72,16 +72,23 @@ struct Banner
 
 class CDSImage{
 public:
-	CDSImage() { m_pbmi = NULL; }
+	CDSImage();
+    CDSImage(const CDSImage& img);
 	CDSImage(char* dsrom);
     ~CDSImage();
 
-	BOOL Load(char* dsrom);
+    BOOL Load(char* dsrom);
 	void Release();
+
+    CDSImage& operator=(const CDSImage& img);
 
     const PBITMAPINFO GetBitmapInfo() const { return m_pbmi; }
     const u8* GetImageData() const { return m_image; }
 private:
-	PBITMAPINFO m_pbmi;
-    u8          m_image[32*32];
+    void assign(const CDSImage& img);
+	BOOL Init(char* dsrom);
+private:
+    PBITMAPINFO m_pbmi;
+    int*        m_pref;
+    u8*         m_image;
 };

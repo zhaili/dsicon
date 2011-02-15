@@ -1,4 +1,7 @@
 EXPORTS
+  ListLoad
+  ListCloseWindow
   ListGetDetectString
+  ListSendCommand
   ListGetPreviewBitmap
   ListSetDefaultParams

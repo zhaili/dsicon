@@ -72,13 +72,25 @@ void ReadDSImage(char* filename, u8* image, u16* pal)
 }
 
 
-
 ///// Class CDSImage
+CDSImage::CDSImage()
+{
+    m_pref  = NULL;
+    m_pbmi  = NULL;
+    m_image = NULL;
+}
 
 CDSImage::CDSImage(char* dsrom)
 {
-	m_pbmi = NULL;
-    Load(dsrom);
+    m_pref  = NULL;
+	m_pbmi  = NULL;
+    m_image = NULL;
+    Init(dsrom);
+}
+
+CDSImage::CDSImage(const CDSImage& img)
+{
+    assign(img);
 }
 
 CDSImage::~CDSImage()
@@ -86,10 +98,51 @@ CDSImage::~CDSImage()
     Release();
 }
 
-BOOL CDSImage::Load(char* dsrom)
+void CDSImage::Release()
+{
+    if (!m_pref)
+        return;
+    
+    (*m_pref)--;
+
+    if (!*m_pref)
+    {
+        free(m_pref);
+        free(m_pbmi);
+        free(m_image);
+    }
+
+    m_pref  = NULL;
+    m_pbmi  = NULL;
+    m_image = NULL;
+}
+
+void CDSImage::assign(const CDSImage& img)
+{
+    this->m_pbmi  = img.m_pbmi;
+    this->m_image = img.m_image;
+    this->m_pref  = img.m_pref;
+
+	if (m_pref)
+        (*m_pref)++;
+}
+
+CDSImage& CDSImage::operator=(const CDSImage& img)
 {
     Release();
 
+    assign(img);
+	return (*this);
+}
+
+BOOL CDSImage::Load(char* dsrom)
+{
+    Release();
+    return Init(dsrom);
+}
+
+BOOL CDSImage::Init(char* dsrom)
+{
 	PBITMAPINFO pbmi = (PBITMAPINFO)malloc(
         sizeof(BITMAPINFO)+15*sizeof(RGBQUAD));
 
@@ -109,6 +162,7 @@ BOOL CDSImage::Load(char* dsrom)
     pbmih->biClrImportant  = 0;
 
     u16 pal[16];
+    m_image = (u8*)malloc(sizeof(u8)*32*32);
     ReadDSImage(dsrom, m_image, pal);
 
     for (int i=0; i<16; ++i)
@@ -118,16 +172,9 @@ BOOL CDSImage::Load(char* dsrom)
         pbmi->bmiColors[i].rgbBlue  = 255 * ((pal[i] >> 10) & 31) / 31;
     }
 
-    m_pbmi = pbmi;
+    m_pbmi  = pbmi;
+    m_pref  = (int*)malloc(sizeof(int));
+    *m_pref = 1;
 
     return TRUE;
-}
-
-void CDSImage::Release()
-{
-    if (m_pbmi != NULL)
-    {
-        free(m_pbmi);
-        m_pbmi = NULL;
-    }
 }

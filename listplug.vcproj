@@ -75,7 +75,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile=".\Release/listplug.dll"
+				OutputFile=".\Release/listplug.wlx"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
 				ModuleDefinitionFile=".\listplug.def"

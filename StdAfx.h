@@ -14,17 +14,20 @@
 // Insert your headers here
 #define WIN32_LEAN_AND_MEAN		// Exclude rarely-used stuff from Windows headers
 
-#include <windows.h>
+//#define _CRTDBG_MAP_ALLOC
 #include <stdlib.h>
-#include <shellapi.h>
+//#include <crtdbg.h>
+#include <stdio.h>
+#include <assert.h>
 #include <malloc.h>
-#include <richedit.h>
-#include <commdlg.h>
 #include <math.h>
 
-#include <stdio.h>
+#include <map>
 
-// TODO: reference additional headers your program requires here
+#include <windows.h>
+#include <shellapi.h>
+#include <richedit.h>
+#include <commdlg.h>
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
