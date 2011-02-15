@@ -234,6 +234,10 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath=".\dsheader.cpp"
+				>
+			</File>
+			<File
 				RelativePath="listplug.cpp"
 				>
 				<FileConfiguration
@@ -286,6 +290,10 @@
 			>
 			<File
 				RelativePath="cunicode.h"
+				>
+			</File>
+			<File
+				RelativePath=".\dsheader.h"
 				>
 			</File>
 			<File

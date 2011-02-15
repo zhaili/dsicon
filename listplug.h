@@ -44,5 +44,3 @@ int __stdcall ListNotificationReceived(HWND ListWin,int Message,WPARAM wParam,LP
 void __stdcall ListSetDefaultParams(ListDefaultParamStruct* dps);
 HBITMAP __stdcall ListGetPreviewBitmap(char* FileToLoad,int width,int height,
     char* contentbuf,int contentbuflen);
-
-
