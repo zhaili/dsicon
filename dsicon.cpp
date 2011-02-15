@@ -1,12 +1,11 @@
-// listplug.cpp : Defines the entry point for the DLL application.
+// dsicon.cpp : Defines the entry point for the DLL application.
 //
 
 #include "stdafx.h"
 
 #include "..\vld\include\vld.h"
 
-#include "listplug.h"
-#include "cunicode.h"
+#include "dsicon.h"
 
 #include "dsheader.h"
 

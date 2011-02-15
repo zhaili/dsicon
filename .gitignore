@@ -9,3 +9,6 @@
 *.user
 *.sdf
 *.ipch
+/dbghelp.dll
+/vld.dll
+/vld.lib

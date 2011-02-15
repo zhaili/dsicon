@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="listplug"
+	Name="dsicon"
 	ProjectGUID="{93DACDF1-0A69-4486-B69B-3440E729DBCD}"
 	TargetFrameworkVersion="0"
 	>
@@ -42,20 +42,20 @@
 				MkTypLibCompatible="true"
 				SuppressStartupBanner="true"
 				TargetEnvironment="1"
-				TypeLibraryName=".\Release/listplug.tlb"
+				TypeLibraryName=".\Release/dsicon.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;LISTPLUG_EXPORTS"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;DSICON_EXPORTS"
 				StringPooling="true"
 				RuntimeLibrary="0"
 				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="2"
 				PrecompiledHeaderThrough="stdafx.h"
-				PrecompiledHeaderFile=".\Release/listplug.pch"
+				PrecompiledHeaderFile=".\Release/dsicon.pch"
 				AssemblerListingLocation=".\Release/"
 				ObjectFile=".\Release/"
 				ProgramDataBaseFileName=".\Release/"
@@ -75,14 +75,14 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile=".\Release/listplug.wlx"
+				OutputFile=".\Release/dsicon.wlx"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
-				ModuleDefinitionFile=".\listplug.def"
-				ProgramDatabaseFile=".\Release/listplug.pdb"
+				ModuleDefinitionFile=".\dsicon.def"
+				ProgramDatabaseFile=".\Release/dsicon.pdb"
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="0"
-				ImportLibrary=".\Release/listplug.lib"
+				ImportLibrary=".\Release/dsicon.lib"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -97,7 +97,7 @@
 			<Tool
 				Name="VCBscMakeTool"
 				SuppressStartupBanner="true"
-				OutputFile=".\Release/listplug.bsc"
+				OutputFile=".\Release/dsicon.bsc"
 			/>
 			<Tool
 				Name="VCFxCopTool"
@@ -137,19 +137,19 @@
 				MkTypLibCompatible="true"
 				SuppressStartupBanner="true"
 				TargetEnvironment="1"
-				TypeLibraryName=".\Debug/listplug.tlb"
+				TypeLibraryName=".\Debug/dsicon.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;LISTPLUG_EXPORTS"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;DSICON_EXPORTS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
 				UsePrecompiledHeader="2"
 				PrecompiledHeaderThrough="stdafx.h"
-				PrecompiledHeaderFile=".\Debug/listplug.pch"
+				PrecompiledHeaderFile=".\Debug/dsicon.pch"
 				AssemblerListingLocation=".\Debug/"
 				ObjectFile=".\Debug/"
 				ProgramDataBaseFileName=".\Debug/"
@@ -170,15 +170,15 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="Debug/listplug.wlx"
+				OutputFile="Debug/dsicon.wlx"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
-				ModuleDefinitionFile=".\listplug.def"
+				ModuleDefinitionFile=".\dsicon.def"
 				GenerateDebugInformation="true"
-				ProgramDatabaseFile=".\Debug/listplug.pdb"
+				ProgramDatabaseFile=".\Debug/dsicon.pdb"
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="0"
-				ImportLibrary=".\Debug/listplug.lib"
+				ImportLibrary=".\Debug/dsicon.lib"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -193,7 +193,7 @@
 			<Tool
 				Name="VCBscMakeTool"
 				SuppressStartupBanner="true"
-				OutputFile=".\Debug/listplug.bsc"
+				OutputFile=".\Debug/dsicon.bsc"
 			/>
 			<Tool
 				Name="VCFxCopTool"
@@ -214,31 +214,11 @@
 			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 			>
 			<File
-				RelativePath="cunicode.cpp"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-			</File>
-			<File
 				RelativePath=".\dsheader.cpp"
 				>
 			</File>
 			<File
-				RelativePath="listplug.cpp"
+				RelativePath="dsicon.cpp"
 				>
 				<FileConfiguration
 					Name="Release|Win32"
@@ -258,7 +238,7 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="listplug.def"
+				RelativePath="dsicon.def"
 				>
 			</File>
 			<File
@@ -289,15 +269,11 @@
 			Filter="h;hpp;hxx;hm;inl"
 			>
 			<File
-				RelativePath="cunicode.h"
-				>
-			</File>
-			<File
 				RelativePath=".\dsheader.h"
 				>
 			</File>
 			<File
-				RelativePath="listplug.h"
+				RelativePath="dsicon.h"
 				>
 			</File>
 			<File

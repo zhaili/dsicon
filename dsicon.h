@@ -1,4 +1,4 @@
-/* Contents of file listplug.h */
+/* Contents of file dsicon.h */
 
 #define lc_copy		1
 #define lc_newparams	2

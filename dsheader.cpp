@@ -10,6 +10,9 @@ void ReadTile(char* romname, u8* tile, u16* palette)
 {
     FILE* fp = fopen(romname, "rb");
 
+	if (fp == NULL)
+		return;
+
     NDS_header header;
     Banner     banner;
 
